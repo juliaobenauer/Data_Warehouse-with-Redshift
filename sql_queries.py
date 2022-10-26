@@ -21,21 +21,21 @@ staging_events_table_create= ("""
     CREATE TABLE IF NOT EXISTS staging_events
     (
         artist VARCHAR,
-        auth VARCHAR NOT NULL,
-        firstName VARCHAR(50),
-        gender CHAR,
-        itemInSession INTEGER NOT NULL,
-        lastName VARCHAR(50),
+        auth VARCHAR,
+        firstName VARCHAR,
+        gender VARCHAR,
+        itemInSession INTEGER,
+        lastName VARCHAR,
         length NUMERIC,
-        level VARCHAR NOT NULL,
+        level VARCHAR,
         location VARCHAR,
-        method VARCHAR NOT NULL,
-        page VARCHAR NOT NULL,
+        method VARCHAR,
+        page VARCHAR,
         registration NUMERIC,
-        sessionId INTEGER NOT NULL,
+        sessionId INTEGER,
         song VARCHAR,
-        status INTEGER NOT NULL,
-        ts BIGINT NOT NULL,
+        status INTEGER,
+        ts BIGINT,
         userAgent VARCHAR,
         userId INTEGER
     );
@@ -44,15 +44,15 @@ staging_events_table_create= ("""
 staging_songs_table_create = ("""
     CREATE TABLE IF NOT EXISTS staging_songs
     (
-        num_songs INTEGER NOT NULL,
-        artist_id VARCHAR NOT NULL,
+        num_songs INTEGER,
+        artist_id VARCHAR,
         artist_latitude NUMERIC,
         artist_longitude NUMERIC,
         artist_location VARCHAR,
-        artist_name VARCHAR NOT NULL,
-        song_id VARCHAR NOT NULL,
-        title VARCHAR NOT NULL,
-        duration NUMERIC NOT NULL,
+        artist_name VARCHAR,
+        song_id VARCHAR,
+        title VARCHAR,
+        duration NUMERIC,
         year NUMERIC
     );
 """)
@@ -76,8 +76,8 @@ user_table_create = ("""
     CREATE TABLE IF NOT EXISTS users
     (
         userId INTEGER PRIMARY KEY,
-        firsname VARCHAR(50) NOT NULL,
-        lastname VARCHAR(50) NOT NULL,
+        firsname VARCHAR NOT NULL,
+        lastname VARCHAR NOT NULL,
         gender VARCHAR NOT NULL,
         level VARCHAR NOT NULL
     )
